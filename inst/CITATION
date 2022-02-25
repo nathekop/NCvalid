@@ -1,0 +1,14 @@
+citHeader("To cite NCvalid in publications use:")
+
+
+citEntry(entry = "Article",
+         title = "Clustering performance analysis using new correlation based cluster validity indices",
+         author = personList(as.person("Nathakhun Wiroonsri")),
+         journal      = "arXiv:2109.11172",
+         year         = "2021",
+         url          = "https://arxiv.org/abs/2109.11172",
+         textVersion  =  paste("Nathakhun Wiroonsri (2021).",
+                               "Clustering performance analysis using new correlation based cluster validity indices.",
+                               "arXiv:2109.11172",
+                               "URL https://arxiv.org/abs/2109.11172.")
+         )
