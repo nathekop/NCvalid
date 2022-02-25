@@ -16,7 +16,7 @@ The lastest development version of the package can be loaded directly from GitHu
 
 ```bash
 #install.packages("devtools")
-devtools::install_github("nathekop/NCvalid")
+devtools::install_github("nwiroonsri/NCvalid")
 ```
 
 ## Simple Example
