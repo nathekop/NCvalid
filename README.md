@@ -8,7 +8,7 @@ It contains a main function (NCvalid) that computes NC correlation, NCI1 and NCI
 The correlation-based indices are recently introduced in Wiroonsri(2021).  Our indices constantly yield several peaks at different numbers of clusters 
 which allow the users to rank their options. This benefits the users who work in the area that the number of clusters is not necessarily fixed. 
 Furthermore, a global peak can accurately detect the number of cluster in the case that it is fixed. 
-The pacakge also provides a function (Ovalid) that computes other well-known validity incides used in Wiroonsri(2021).
+The package also provides a function (Ovalid) that computes other well-known validity incides used in Wiroonsri(2021).
 
 ## Installation
 
