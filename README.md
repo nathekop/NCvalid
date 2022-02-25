@@ -15,7 +15,7 @@ The package also provides a function (Ovalid) that computes other well-known val
 The lastest development version of the package can be loaded directly from GitHub using the devtools package:
 
 ```bash
-#install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("nwiroonsri/NCvalid")
 ```
 
