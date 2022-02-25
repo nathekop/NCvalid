@@ -43,6 +43,7 @@ plot(nc$NCI2,ylab = "NCI2", xlab = "number of clusters",type='b')
 
 ```r
 #Evaluate a hierarchical clustering (complete linkage) result on a simulated dataset
+
 a = runif(550,min = 0,max = 2*pi)
 r = runif(550,min = 0, max = 1)
 
