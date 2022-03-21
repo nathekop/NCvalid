@@ -28,11 +28,12 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100) {
     centroid = matrix(1:(dm[2]*k),k,dm[2])
     for (j in 1:k)
     {
-      if (nrow(x[cluss==j,])>1){
-        centroid[j,] = colMeans(x[cluss==j,])
-      }
-      else {
+      if (is.null(nrow(x[cluss==j,]))){
         centroid[j,] = x[cluss==j,]
+      } else if (nrow(x[cluss==j,])==1){
+        centroid[j,] = x[cluss==j,]
+      } else {
+        centroid[j,] = colMeans(x[cluss==j,])
       }
       xnew[cluss==j,] = rep(centroid[j,],each = sum(cluss==j))
     }
