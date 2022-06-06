@@ -62,7 +62,7 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
     CSL[k-kmin+1] = CSL[k-kmin+1]/sum(apply(dd2,2,min))
 
     if (sum(indexlist == "all") ==1 | "CH"%in% indexlist | "GDI33" %in% indexlist | "GDI43" %in% indexlist | "GDI53" %in% indexlist){
-      intall = intCriteria(x,cluss,c("Calinski_Harabasz","GDI33","GDI43","GDI53"))
+      intall = intCriteria(as.matrix(x),cluss,c("Calinski_Harabasz","GDI33","GDI43","GDI53"))
       CH[k-kmin+1] = intall$calinski_harabasz
       GD33[k-kmin+1] = intall$gdi33
       GD43[k-kmin+1] = intall$gdi43
