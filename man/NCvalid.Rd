@@ -8,7 +8,7 @@ New correlation-based cluster validity indices
 Compute the NC correlation, NCI1 and NCI2 cluster validity indices for the number of clusters from user specified \code{kmin} to \code{kmax} obtained from either K-means or hierarchical clustering based on the recent paper by Wiroonsri(2021).
 }
 \usage{
-NCvalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100)
+NCvalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCstart=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
