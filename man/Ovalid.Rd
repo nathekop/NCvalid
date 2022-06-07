@@ -8,7 +8,7 @@ New correlation-based cluster validity indices and other well-known cluster vali
 Compute the cluster validity indices from user specified \code{kmin} to \code{kmax} used in Wiroonsri(2021) including Calinski-Harabasz(CH), Chou-Su-Lai measure(CSL), Dunn's index(DI), Davies-Bouldin's measure(DB), Davies-Bouldin* measure (DBs), Generalized Dunn 33,43,53 index(GD33,GD43,GD53), Point biserial correlation(PB), Silhouette coefficient(SC), Score function(SF), NC correlation, NCI1 and NCI2. The clustering are obtained from either K-means or hierarchical clustering.
 }
 \usage{
-Ovalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all')
+Ovalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all',NCstart=TRUE)
 }
 \arguments{
   \item{x}{the data set matrix where each column is a variable to be used for cluster analysis and each row is a data point.}
