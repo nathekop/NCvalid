@@ -2,7 +2,7 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
   dm=dim(x)
   d = as.vector(dist(x))
   crr = rep(0,kmax-kmin+2)
-  if NCstart {
+  if (NCstart) {
     crr[1] = sd(d)/(max(d)-min(d))  
   }
   if (method == 'hclust_complete') {
