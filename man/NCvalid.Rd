@@ -19,6 +19,7 @@ NCvalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100)
 }
   \item{corr}{a character string indicating which correlation coefficient is to be computed ("pearson", "kendall", "spearman")}
   \item{nstart}{for method="kmeans", enter the maximum number of initial random sets to be performed}
+  \item{NCstart}{logical, if true, the NC correlation at k=1 is defined as sd(dist(x))/(max(dist(x))-min(dist(x))). Otherwise, the NC correlation at k=1 is defined as 0.}
 }
 \details{
 The NC correlation computes the correlation between an actual distance between a pair of data points and a centroid distance of clusters that the two points locate in. NCI1 and NCI2 are the proportion and the subtraction, respectively, of the same two ratios. The first ratio is the NC improvement from \code{k-1} clusters to \code{k} clusters over the entire room for improvement. The second ratio is the NC improvement from \code{k} clusters to \code{k+1} clusters over the entire room for improvement.
