@@ -3,7 +3,8 @@ NCcorr <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCsta
   crr = rep(0,kmax-kmin+1)
   dis = dist(x)
   if (NCstart) {
-    crr[1] = sd(dis)/(max(dis)-min(dis))  
+    dtom = sqrt(rowSums((x-colMeans(x))^2))
+    sd(dtom)/(max(dtom)-min(dtom))
   }
   if (method == 'hclust_complete') {
     hh = hclust(dist(x),method = 'complete')
