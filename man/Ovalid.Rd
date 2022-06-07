@@ -19,7 +19,7 @@ Ovalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all',N
   \item{corr}{a character string indicating which correlation coefficient is to be computed ("pearson", "kendall", "spearman")}
   \item{nstart}{for method="kmeans", enter the maximum number of initial random sets to be performed}
   \item{indexlist}{a character string indicating which cluster validity indices to be computed ("all", "CH", "CSL", "DB", "DBs", "DI", "GD33", "GD43", "GD53", "PB", "SC", "SF", "NC", "NCI1", "NCI2" or selected a set of indices as an array of any length)}
-  \item{NCstart}{logical, if true, the NC correlation at k=1 is defined as an adjusted sd of all data points and their mean. Otherwise, the NC correlation at k=1 is defined as 0.}
+  \item{NCstart}{logical, if true, the NC correlation at k=1 is defined as an adjusted sd of the distances between all data points and their mean. Otherwise, the NC correlation at k=1 is defined as 0.}
 }
 \details{
 The well-known cluster validity indices used in Wiroonsri(2021) include Calinski-Harabasz(CH), Chou-Su-Lai measure(CSL), Dunn's index(DI), Davies-Bouldin's measure(DB), Davies-Bouldin* measure (DBs), Generalized Dunn 33,43,53 index(GD33,GD43,GD53), Point biserial correlation(PB), Silhouette coefficient(SC) and Score function(SF).
