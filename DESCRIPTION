@@ -1,7 +1,7 @@
 Package: NCvalid
 Type: Package
 Title: New correlation based cluster validity indices
-Version: 1.0.1
+Version: 1.0.2
 Author: Nathakhun Wiroonsri <https://sites.google.com/view/nwiroonsri/>
 Maintainer: Nathakhun Wiroonsri <nathakhun.wir@kmutt.ac.th>
 Description: New correlation based cluster validity indices introduced in Wiroonsri(2021)
