@@ -8,7 +8,7 @@ Correlation for clustering results
 Compute the NC correlation for the number of clusters from user specified \code{kmin-1} to \code{kmax+1}obtained from either K-means or hierarchical clustering based on the recent paper by Wiroonsri(2021).
 }
 \usage{
-NCcorr(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100)
+NCcorr(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCstart=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
