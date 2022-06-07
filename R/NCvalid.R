@@ -1,7 +1,10 @@
-NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100) {
+NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCstart = TRUE) {
   dm=dim(x)
   d = as.vector(dist(x))
   crr = rep(0,kmax-kmin+2)
+  if NCstart {
+    crr[1] = sd(d)/(max(d)-min(d))  
+  }
   if (method == 'hclust_complete') {
     hh = hclust(dist(x),method = 'complete')
   } else if (method == 'hclust_average') {
