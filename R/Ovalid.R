@@ -1,4 +1,4 @@
-Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all') {
+Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all',NCstart = TRUE) {
   dm=dim(x)
   dis = dist(x)
   PB = rep(0,kmax-kmin+1)
@@ -118,7 +118,7 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   PB = data.frame(cbind("k"=kmin:kmax,"CH"=PB))
 
 if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | 'NCI2' %in% indexlist){
-  nw = NCvalid(x,kmax,kmin,method,corr,nstart)
+  nw = NCvalid(x,kmax,kmin,method,corr,nstart,NCstart)
   crr = nw$NC
   NCI1 = nw$NCI1
   NCI2 = nw$NCI2
