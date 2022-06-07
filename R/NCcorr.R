@@ -1,7 +1,10 @@
-NCcorr <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100) {
+NCcorr <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCstart=TRUE) {
   dm=dim(x)
   crr = rep(0,kmax-kmin+1)
   dis = dist(x)
+  if (NCstart) {
+    crr[1] = sd(dis)/(max(dis)-min(dis))  
+  }
   if (method == 'hclust_complete') {
     hh = hclust(dist(x),method = 'complete')
   }
