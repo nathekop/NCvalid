@@ -4,7 +4,7 @@ NCcorr <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCsta
   dis = dist(x)
   if (NCstart) {
     dtom = sqrt(rowSums((x-colMeans(x))^2))
-    sd(dtom)/(max(dtom)-min(dtom))
+    crr[1] = sd(dtom)/(max(dtom)-min(dtom))
   }
   if (method == 'hclust_complete') {
     hh = hclust(dist(x),method = 'complete')
