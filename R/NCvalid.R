@@ -3,7 +3,8 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
   d = as.vector(dist(x))
   crr = rep(0,kmax-kmin+2)
   if (NCstart) {
-    crr[1] = sd(d)/(max(d)-min(d))  
+    dtom = sqrt(rowSums((Data_norm-cm)^2))
+    crr[1] = sd(dtom)/(max(dtom)-min(dtom))
   }
   if (method == 'hclust_complete') {
     hh = hclust(dist(x),method = 'complete')
