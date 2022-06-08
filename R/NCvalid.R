@@ -33,9 +33,9 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
     for (j in 1:k)
     {
       if (is.null(nrow(x[cluss==j,]))){
-        centroid[j,] = x[cluss==j,]
+        centroid[j,] = as.numeric(x[cluss==j,])
       } else if (nrow(x[cluss==j,])==1){
-        centroid[j,] = x[cluss==j,]
+        centroid[j,] = as.numeric(x[cluss==j,])
       } else {
         centroid[j,] = colMeans(x[cluss==j,])
       }
