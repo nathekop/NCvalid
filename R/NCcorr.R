@@ -29,14 +29,16 @@ NCcorr <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCsta
     centroid = matrix(1:(dm[2]*k),k,dm[2])
     for (j in 1:k)
     {
-      if (length(x[cluss==j,])>dm[2]){
+      if (is.null(nrow(x[cluss==j,]))){
+        centroid[j,] = as.numeric(x[cluss==j,])
+      } else if (nrow(x[cluss==j,])==1){
+        centroid[j,] = as.numeric(x[cluss==j,])
+      } else {
         centroid[j,] = colMeans(x[cluss==j,])
-      }
-      else {
-        centroid[j,] = x[cluss==j,]
       }
       xnew[cluss==j,] = rep(centroid[j,],each = sum(cluss==j))
     }
+
     d = as.vector(dist(x))
     d2 = as.vector(dist(xnew))
     crr[k-kmin+1]= cor(d,d2,method=corr)
