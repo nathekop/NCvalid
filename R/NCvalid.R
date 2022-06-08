@@ -45,11 +45,15 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
     crr[k-kmin+2]= cor(d,d2,method=corr)
   }
   K = length(crr)
-  NWI = ((crr[2:(K-1)]-crr[1:(K-2)])/(1-crr[1:(K-2)]))/((crr[3:K]-crr[2:(K-1)])/(1-crr[2:(K-1)]))
+  NWI = ((crr[2:(K-1)]-crr[1:(K-2)])/(1-crr[1:(K-2)]))/max(0,(crr[3:K]-crr[2:(K-1)])/(1-crr[2:(K-1)]))
   NWI2 = (crr[2:(K-1)]-crr[1:(K-2)])/(1-crr[1:(K-2)])-(crr[3:K]-crr[2:(K-1)])/(1-crr[2:(K-1)])
+  NWI3 = NWI1
+  NWI3[NWI==Inf] = max(NWI[is.finite(NWI)])+NWI2[NWI==Inf]
+  NWI3[NWI==-Inf] = min(NWI[is.finite(NWI)])
   NWI = data.frame(cbind("k"= kmin:kmax, "NCI1" = NWI))
   NWI2 = data.frame(cbind("k"=kmin:kmax,"NCI2"=NWI2))
+  NWI3 = data.frame(cbind("k"=kmin:kmax,"NCI3"=NWI3))
   crr = data.frame(cbind("k" = (kmin-1):(kmax+1), "NC" = crr))
-  my_list <- list("NC" = crr, "NCI1" = NWI, "NCI2" = NWI2)
+  my_list <- list("NC" = crr, "NCI1" = NWI, "NCI2" = NWI2, "NCI3" = NWI3)
   return(my_list)
 }
