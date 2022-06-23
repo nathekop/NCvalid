@@ -52,7 +52,7 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
   NWI3[NWI==-Inf] = min(NWI[is.finite(NWI)])
   NWI = data.frame(cbind("k"= kmin:kmax, "NCI1" = NWI))
   NWI2 = data.frame(cbind("k"=kmin:kmax,"NCI2"=NWI2))
-  NWI3 = data.frame(cbind("k"=kmin:kmax,"NCI3"=NWI3))
+  NWI3 = data.frame(cbind("k"=kmin:kmax,"NCI"=NWI3))
   crr = data.frame(cbind("k" = (kmin-1):(kmax+1), "NC" = crr))
   my_list <- list("NC" = crr, "NCI" = NWI3, "NCI1" = NWI, "NCI2" = NWI2)
   return(my_list)
