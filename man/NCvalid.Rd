@@ -5,7 +5,7 @@
 New correlation-based cluster validity indices
 }
 \description{
-Compute the NC correlation, NCI1 and NCI2 cluster validity indices for the number of clusters from user specified \code{kmin} to \code{kmax} obtained from either K-means or hierarchical clustering based on the recent paper by Wiroonsri(2021).
+Compute the NC correlation, NCI, NCI1 and NCI2 cluster validity indices for the number of clusters from user specified \code{kmin} to \code{kmax} obtained from either K-means or hierarchical clustering based on the recent paper by Wiroonsri(2021).
 }
 \usage{
 NCvalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,NCstart=TRUE)
@@ -26,6 +26,7 @@ The NC correlation computes the correlation between an actual distance between a
 }
 \value{
 \item{NC}{the NC correlations from \code{kmin-1} to \code{kmax+1} defined in the recent paper Wiroonsri(2021)}
+\item{NCI}{the NCI index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{NCI1}{the NCI1 index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{NCI2}{the NCI2 index from from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 }
