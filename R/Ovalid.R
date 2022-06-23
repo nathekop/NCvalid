@@ -123,7 +123,7 @@ if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | '
   crr = nw$NC
   NCI1 = nw$NCI1
   NCI2 = nw$NCI2
-  NCI3 = nw$NCI3
+  NCI3 = nw$NCI
 }
 
   my_list <- list("NC"=crr, "NCI" = NCI3, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD33" = GD33, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "SF"=SF,  "SC"=SC)
