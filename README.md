@@ -33,11 +33,12 @@ x <- scale(x[,1:4])
 
 nc = NCvalid(x, kmax=10)
 
-#Plot NC correlation, NCI1, NCI2
+#Plot NC correlation, NCI NCI1, NCI2
 
 par(mar = c(4, 4, 0.5, 0.5))
-par(mfrow=c(1,3))
+par(mfrow=c(2,2))
 plot(nc$NC,ylab = "NC", xlab = "number of clusters",type='b')
+plot(nc$NCI,ylab = "NCI", xlab = "number of clusters",type='b')
 plot(nc$NCI1,ylab = "NCI1", xlab = "number of clusters",type='b')
 plot(nc$NCI2,ylab = "NCI2", xlab = "number of clusters",type='b')
 ```
@@ -64,7 +65,7 @@ graphics.off()
 
 # Compute 6 cluster validity indices of a hierarchical clustering (average) result for k from 2 to 10
 
-ilist =  c('NCI1','NCI2','CH','DI','SC','GD33')
+ilist =  c('NCI','CH','DI', 'DB*','SC','GD33')
 nc = Ovalid(dat, kmax=10, kmin=2, method = 'hclust_average', indexlist = ilist)
 
 # Plot the indices in the list
