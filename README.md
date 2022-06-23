@@ -1,10 +1,11 @@
 # NCvalid
-New correlation based cluster validity indices
+A new correlation based cluster validity index
 
 ## Description
 
 NCvalid is a package used for analyzing crisp clustering results such as k-means and hierarchical clustering. 
-It contains a main function (NCvalid) that computes NC correlation, NCI1 and NCI2 cluster validity indices in a user specified range of the number of clusters.
+It contains a main function (NCvalid) that computes NC correlation, NCI, NCI1 and NCI2 cluster validity indices in a user specified range of the number of clusters.
+NCI is defined as a combination of NCI1 and NCI2 which is our final proposed cluster validity index.
 The correlation-based indices are recently introduced in Wiroonsri(2021) where the larger indices indicate the better clustering result. 
 Our indices constantly yield several peaks at different numbers of clusters 
 which allow the users to rank their options. This benefits the users who work in the area that the number of clusters is not necessarily fixed. 
