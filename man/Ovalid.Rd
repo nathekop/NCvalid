@@ -28,6 +28,7 @@ The NC correlation computes the correlation between an actual distance between a
 }
 \value{
 \item{NC}{the NC correlations from \code{kmin-1} to \code{kmax+1} defined in the recent paper Wiroonsri(2021)}
+\item{NCI1}{the NCI index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{NCI1}{the NCI1 index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{NCI2}{the NCI2 index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{CH}{Calinski-Harabasz index from \code{kmin} to \code{kmax}}
