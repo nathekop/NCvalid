@@ -118,7 +118,7 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   CH = data.frame(cbind("k"=kmin:kmax,"CH"=CH))
   PB = data.frame(cbind("k"=kmin:kmax,"CH"=PB))
 
-if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | 'NCI2' %in% indexlist  | 'NCI3' %in% indexlist){
+if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | 'NCI2' %in% indexlist  | 'NCI' %in% indexlist){
   nw = NCvalid(x,kmax,kmin,method,corr,nstart,NCstart)
   crr = nw$NC
   NCI1 = nw$NCI1
@@ -126,7 +126,7 @@ if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | '
   NCI3 = nw$NCI3
 }
 
-  my_list <- list("NC"=crr, "NCI1" = NCI1, "NCI2" = NCI2, "NCI3" = NCI3, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD33" = GD33, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "SF"=SF,  "SC"=SC)
+  my_list <- list("NC"=crr, "NCI" = NCI3, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD33" = GD33, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "SF"=SF,  "SC"=SC)
   if (sum(indexlist == "all")==1){
     return(my_list)
   } else {
