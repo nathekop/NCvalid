@@ -128,7 +128,7 @@ if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | '
   NCI = nw$NCI
 }
 if (sum(indexlist == "all") ==1 | "STR"%in% indexlist | "PBM"%in% indexlist){
-  sss = STRPBM(x,kmax,kmin,nstart)
+  sss = STRPBM(x,kmax,kmin,method,nstart)
   STR = sss$STR
   PBM = sss$PBM
 }
