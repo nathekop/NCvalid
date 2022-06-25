@@ -28,7 +28,7 @@ The NC correlation computes the correlation between an actual distance between a
 }
 \value{
 \item{NC}{the NC correlations from \code{kmin-1} to \code{kmax+1} defined in the recent paper Wiroonsri(2021)}
-\item{NCI1}{the NCI index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
+\item{NCI}{the NCI index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{NCI1}{the NCI1 index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{NCI2}{the NCI2 index from \code{kmin} to \code{kmax} defined in the recent paper Wiroonsri(2021)}
 \item{CH}{Calinski-Harabasz index from \code{kmin} to \code{kmax}}
@@ -40,8 +40,10 @@ The NC correlation computes the correlation between an actual distance between a
 \item{GD43}{Generalized Dunn index (4,3) from \code{kmin} to \code{kmax}}
 \item{GD53}{Generalized Dunn index (5,3) from \code{kmin} to \code{kmax}}
 \item{PB}{Point biserial correlation from \code{kmin} to \code{kmax}}
+\item{PBM}{PBM index from \code{kmin} to \code{kmax}}
 \item{SF}{Score function from \code{kmin} to \code{kmax}}
 \item{SC}{Silhouette coefficient from \code{kmin} to \code{kmax}}
+\item{STR}{STR index from \code{kmin} to \code{kmax}}
 }
 \references{
  J. C. Bezdek, N. R. Pal, Some new indexes of cluster validity. \emph{IEEE Transactions on Systems, Man, and Cybernetics}, Part B, 28, 301-315 (1998).
@@ -65,10 +67,14 @@ M. Kim, R. S. Ramakrishna, New indices for cluster validity assessment. \emph{Pa
 M. Maechler, P. Rousseeuw, A. Struyf, M. Hubert, K. Hornik, cluster: Cluster Analysis Basics and Extensions. R package version 2.1.2. (2021).
 
 G. W. Miligan, An examination of the effect of six types of error perturbation on fifteen clustering algorithms. \emph{Psychometrika}, 45, 325-342 (1980).
+  
+M. K. Pakhira, S. Bandyopadhyay and U. Maulik, Validity index for crisp and fuzzy clusters. \emph{Pattern Recogn} 37(3):487–501 (2004).
 
 P. J. Rousseeuw, Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. \emph{Journal of Computational and Applied Mathematics}, 20, 53-65 (1987).
 
 S. Saitta, B. Raphael, I. Smith, A bounded index for cluster validity. \emph{In Perner, P.: Machine Learning and Data Mining in Pattern Recognition, Lecture Notes in Computer Science}, 4571, Springer (2007).
+
+A. Starczewski, A new validity index for crisp clusters. \emph{Pattern Anal Applic} 20, 687–700 (2017).   
 
 M. Walesiak, A. Dudek, The Choice of Variable Normalization Method in Cluster Analysis, \emph{In
 Soliman KS (ed.), Education Excellence and Innovation Management: A 2025 Vision to Sustain
