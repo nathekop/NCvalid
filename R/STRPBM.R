@@ -53,7 +53,7 @@ STRPBM <- function(x,kmax,kmin=2,method='kmeans',nstart=100) {
     EK[1] = E0
   }
   EKK = E0/EK
-  STR = (EKK[2:(length(EKK)-1)]-EKK[1:(length(EKK)-2)])*(DK[3:(length(EKK))]-EKK[2:(length(EKK)-1)])
+  STR = (EKK[2:(length(EKK)-1)]-EKK[1:(length(EKK)-2)])*(DK[3:(length(DK))]-DK[2:(length(DK)-1)])
   STR = data.frame(cbind("k"= kmin:kmax, "STR" = STR))
   
   PBM = EKK[2:(length(EKK)-1)]*md[2:(length(EKK)-1)]/(kmin:kmax)
