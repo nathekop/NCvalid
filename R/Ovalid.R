@@ -12,6 +12,8 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   DBs = rep(0,kmax-kmin+1)
   SF = rep(0,kmax-kmin+1)
   DI = rep(0,kmax-kmin+1)
+  STR = rep(0,kmax-kmin+1)
+  PBM = rep(0,kmax-kmin+1)
   crr = rep(0,kmax-kmin+2)
   NCI1 = rep(0,kmax-kmin+1)
   NCI2 = rep(0,kmax-kmin+1)
@@ -80,10 +82,10 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
       DB[k-kmin+1] = dd$DB
     }
 
-    if (sum(indexlist == "all") ==1 | "DB"%in% indexlist){
+    if (sum(indexlist == "all") ==1 | "DI"%in% indexlist){
       DI[k-kmin+1] = dunn(distance = dis, cluss, method = "euclidean")
     }
-
+    
     if (sum(indexlist == "all") ==1 | "SF"%in% indexlist | "DBs"%in% indexlist ){
       ddb = rep(0,k)
       wcdd = rep(0,k)
@@ -125,8 +127,13 @@ if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | '
   NCI2 = nw$NCI2
   NCI = nw$NCI
 }
+if (sum(indexlist == "all") ==1 | "STR"%in% indexlist | "PBM"%in% indexlist){
+  sss = STRPBM(x,kmax,kmin,nstart)
+  STR = sss$STR
+  PBM = sss$PBM
+}
 
-  my_list <- list("NC"=crr, "NCI" = NCI, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD33" = GD33, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "SF"=SF,  "SC"=SC)
+  my_list <- list("NC"=crr, "NCI" = NCI, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD33" = GD33, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "PBM"=PBM, "SF"=SF,  "SC"=SC, "STR"=STR)
   if (sum(indexlist == "all")==1){
     return(my_list)
   } else {
