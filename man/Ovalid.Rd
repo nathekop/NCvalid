@@ -18,13 +18,13 @@ Ovalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all',N
 }
   \item{corr}{a character string indicating which correlation coefficient is to be computed ("pearson", "kendall", "spearman")}
   \item{nstart}{for method="kmeans", enter the maximum number of initial random sets to be performed}
-  \item{indexlist}{a character string indicating which cluster validity indices to be computed ("all", "CH", "CSL", "DB", "DBs", "DI", "GD33", "GD43", "GD53", "PB", "SC", "SF", "NC", "NCI1", "NCI2" or selected a set of indices as an array of any length)}
+  \item{indexlist}{a character string indicating which cluster validity indices to be computed ("all", "CH", "CSL", "DB", "DBs", "DI", "GD33", "GD43", "GD53", "PB", "SC", "SF", "NC", "NCI", "NCI1", "NCI2" or selected a set of indices as an array of any length)}
   \item{NCstart}{logical, if true, the NC correlation at k=1 is defined as an adjusted sd of the distances between all data points and their mean. Otherwise, the NC correlation at k=1 is defined as 0.}
 }
 \details{
 The well-known cluster validity indices used in Wiroonsri(2021) include Calinski-Harabasz(CH), Chou-Su-Lai measure(CSL), Dunn's index(DI), Davies-Bouldin's measure(DB), Davies-Bouldin* measure (DBs), Generalized Dunn 33,43,53 index(GD33,GD43,GD53), Point biserial correlation(PB), Silhouette coefficient(SC) and Score function(SF).
-
-The NC correlation computes the correlation between an actual distance between a pair of data points and a centroid distance of clusters that the two points locate in. NCI1 and NCI2 are the proportion and the subtraction, respectively, of the same two ratios. The first ratio is the NC improvement from \code{k-1} clusters to \code{k} clusters over the entire room for improvement. The second ratio is the NC improvement from \code{k} clusters to \code{k+1} clusters over the entire room for improvement.
+  
+The NC correlation computes the correlation between an actual distance between a pair of data points and a centroid distance of clusters that the two points locate in. NCI1 and NCI2 are the proportion and the subtraction, respectively, of the same two ratios. The first ratio is the NC improvement from \code{k-1} clusters to \code{k} clusters over the entire room for improvement. The second ratio is the NC improvement from \code{k} clusters to \code{k+1} clusters over the entire room for improvement. NCI is a combination of NCI1 and NCI2.
 }
 \value{
 \item{NC}{the NC correlations from \code{kmin-1} to \code{kmax+1} defined in the recent paper Wiroonsri(2021)}
