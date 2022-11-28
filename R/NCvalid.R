@@ -54,6 +54,7 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
     }
   }
   if (max(NWI)==Inf){
+    NWI3 = NWI + NWI2
     NWI3[NWI==Inf] = max(NWI[is.finite(NWI)])+NWI2[NWI==Inf]
     if (min(NWI) == -Inf){
       NWI3[NWI==-Inf] = min(NWI[is.finite(NWI)])+NWI2[NWI==-Inf]
