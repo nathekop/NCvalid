@@ -48,10 +48,13 @@ NCvalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100 ,NCs
   NWI = ((crr[2:(K-1)]-crr[1:(K-2)])/(1-crr[1:(K-2)]))/pmax(0,(crr[3:K]-crr[2:(K-1)])/(1-crr[2:(K-1)]))
   NWI2 = (crr[2:(K-1)]-crr[1:(K-2)])/(1-crr[1:(K-2)])-(crr[3:K]-crr[2:(K-1)])/(1-crr[2:(K-1)])
   NWI3 = NWI
-  if (max(NWI)==Inf){
-    NWI3 = max(NWI[is.finite(NWI)])+NWI2
+  if (max(NWI)<Inf){
+    NWI3[NWI==-Inf] = min(NWI[is.finite(NWI)])
   }
-  NWI3[NWI==-Inf] = min(NWI[is.finite(NWI)])
+  if (max(NWI)==Inf){
+    NWI3[NWI==Inf] = max(NWI[is.finite(NWI)])+NWI2
+    NWI3[NWI==-Inf] = min(NWI[is.finite(NWI)])+NWI2
+  }
   
   NWI = data.frame(cbind("k"= kmin:kmax, "NCI1" = NWI))
   NWI2 = data.frame(cbind("k"=kmin:kmax,"NCI2"=NWI2))
