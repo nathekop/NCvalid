@@ -68,6 +68,11 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
     #  GD43[k-kmin+1] = intall$gdi43
     #  GD53[k-kmin+1] = intall$gdi53
     #}
+    
+    if (sum(indexlist == "all") ==1 | "CH"%in% indexlist ){
+      CH[k-kmin+1] = calinhara(x,cluss)
+    }
+
 
     if (sum(indexlist == "all") ==1 | "SC"%in% indexlist){
       ss = silhouette(cluss, dis)
