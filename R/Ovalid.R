@@ -4,7 +4,6 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   PB = rep(0,kmax-kmin+1)
   CSL = rep(0,kmax-kmin+1)
   CH = rep(0,kmax-kmin+1)
-  GD33 = rep(0,kmax-kmin+1)
   GD43 = rep(0,kmax-kmin+1)
   GD53 = rep(0,kmax-kmin+1)
   SC = rep(0,kmax-kmin+1)
@@ -109,7 +108,6 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
     PB[k-kmin+1] = cor(d,d3,method=corr)
   }
   CSL = data.frame(cbind("k"=kmin:kmax,"CSL"=CSL))
-  GD33 = data.frame(cbind("k"=kmin:kmax,"GD33"=GD33))
   GD43 = data.frame(cbind("k"=kmin:kmax,"GD43"=GD43))
   GD53 = data.frame(cbind("k"=kmin:kmax,"GD53"=GD53))
   SC = data.frame(cbind("k"=kmin:kmax,"SC"=SC))
@@ -133,7 +131,7 @@ if (sum(indexlist == "all") ==1 | "STR"%in% indexlist | "PBM"%in% indexlist){
   PBM = sss$PBM
 }
 
-  my_list <- list("NC"=crr, "NCI" = NCI, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD33" = GD33, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "PBM"=PBM, "SF"=SF,  "SC"=SC, "STR"=STR)
+  my_list <- list("NC"=crr, "NCI" = NCI, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "GD43" = GD43, "GD53" = GD53, "PB"=PB, "PBM"=PBM, "SF"=SF,  "SC"=SC, "STR"=STR)
   if (sum(indexlist == "all")==1){
     return(my_list)
   } else {
