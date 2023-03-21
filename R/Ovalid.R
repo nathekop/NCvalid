@@ -146,6 +146,3 @@ if (sum(indexlist == "all") ==1 | "STR"%in% indexlist | "PBM"%in% indexlist){
 
 
 
-
-
-
