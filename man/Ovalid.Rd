@@ -18,7 +18,7 @@ Ovalid(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,indexlist='all',N
 }
   \item{corr}{a character string indicating which correlation coefficient is to be computed ("pearson", "kendall", "spearman")}
   \item{nstart}{for method="kmeans", enter the maximum number of initial random sets to be performed}
-  \item{indexlist}{a character string indicating which cluster validity indices to be computed ("all", "CH", "CSL", "DB", "DBs", "DI", "GD33", "GD43", "GD53", "PB", "SC", "SF", "NC", "NCI", "NCI1", "NCI2" or selected a set of indices as an array of any length) Note: GD33-53 are not working as they require clusterCrit which has been removed from CRAN.}
+  \item{indexlist}{a character string indicating which cluster validity indices to be computed ("all", "CH", "CSL", "DB", "DBs", "DI", "PB", "SC", "SF", "NC", "NCI", "NCI1", "NCI2" or selected a set of indices as an array of any length) Note: GD33-53 are not working as they require clusterCrit which has been removed from CRAN.}
   \item{NCstart}{logical, if true, the NC correlation at k=1 is defined as an adjusted sd of the distances between all data points and their mean. Otherwise, the NC correlation at k=1 is defined as 0.}
 }
 \details{
@@ -36,9 +36,6 @@ The NC correlation computes the correlation between an actual distance between a
 \item{DB}{Davies-Bouldin's measure from \code{kmin} to \code{kmax}}
 \item{DBs}{Davies-Bouldin* measure from \code{kmin} to \code{kmax}}
 \item{DI}{Dunn's index from \code{kmin} to \code{kmax}}
-\item{GD33}{Generalized Dunn index (3,3) from \code{kmin} to \code{kmax}}
-\item{GD43}{Generalized Dunn index (4,3) from \code{kmin} to \code{kmax}}
-\item{GD53}{Generalized Dunn index (5,3) from \code{kmin} to \code{kmax}}
 \item{PB}{Point biserial correlation from \code{kmin} to \code{kmax}}
 \item{PBM}{PBM index from \code{kmin} to \code{kmax}}
 \item{SF}{Score function from \code{kmin} to \code{kmax}}
