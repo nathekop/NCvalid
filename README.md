@@ -65,7 +65,7 @@ graphics.off()
 
 # Compute 6 cluster validity indices of a hierarchical clustering (average) result for k from 2 to 10
 
-ilist =  c('NCI','CH','DI', 'DB*','SC','GD33')
+ilist =  c('NCI','CH','DI', 'DBs','SC','STR')
 nc = Ovalid(dat, kmax=10, kmin=2, method = 'hclust_average', indexlist = ilist)
 
 # Plot the indices in the list
