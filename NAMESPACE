@@ -1,5 +1,4 @@
 exportPattern("^[[:alpha:]]+")
-importFrom(clusterCrit, intCriteria)
 importFrom(cluster, silhouette)
 importFrom(clusterSim, index.DB)
 importFrom(clValid, dunn)
