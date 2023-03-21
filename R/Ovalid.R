@@ -3,7 +3,7 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   dis = dist(x)
   PB = rep(0,kmax-kmin+1)
   CSL = rep(0,kmax-kmin+1)
-  CH = rep(0,kmax-kmin+1)
+  #CH = rep(0,kmax-kmin+1)
   SC = rep(0,kmax-kmin+1)
   DB = rep(0,kmax-kmin+1)
   DBs = rep(0,kmax-kmin+1)
@@ -69,9 +69,9 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
     #  GD53[k-kmin+1] = intall$gdi53
     #}
     
-    if (sum(indexlist == "all") ==1 | "CH"%in% indexlist ){
-      CH[k-kmin+1] = calinhara(x,cluss)
-    }
+    #if (sum(indexlist == "all") ==1 | "CH"%in% indexlist ){
+    #  CH[k-kmin+1] = calinhara(x,cluss)
+    #}
 
 
     if (sum(indexlist == "all") ==1 | "SC"%in% indexlist){
@@ -118,7 +118,7 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   DBs = data.frame(cbind("k"=kmin:kmax,"DBs"=DBs))
   SF = data.frame(cbind("k"=kmin:kmax,"SF"=SF))
   DI = data.frame(cbind("k"=kmin:kmax,"DI"=DI))
-  CH = data.frame(cbind("k"=kmin:kmax,"CH"=CH))
+  #CH = data.frame(cbind("k"=kmin:kmax,"CH"=CH))
   PB = data.frame(cbind("k"=kmin:kmax,"CH"=PB))
 
 if (sum(indexlist == 'all')==1 | 'NC' %in% indexlist | 'NCI1' %in% indexlist | 'NCI2' %in% indexlist  | 'NCI' %in% indexlist){
@@ -134,7 +134,7 @@ if (sum(indexlist == "all") ==1 | "STR"%in% indexlist | "PBM"%in% indexlist){
   PBM = sss$PBM
 }
 
-  my_list <- list("NC"=crr, "NCI" = NCI, "NCI1" = NCI1, "NCI2" = NCI2, "CH" = CH, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "PB"=PB, "PBM"=PBM, "SF"=SF,  "SC"=SC, "STR"=STR)
+  my_list <- list("NC"=crr, "NCI" = NCI, "NCI1" = NCI1, "NCI2" = NCI2, "CSL"=CSL, "DB"=DB, "DBs"=DBs, "DI"=DI, "PB"=PB, "PBM"=PBM, "SF"=SF,  "SC"=SC, "STR"=STR)
   if (sum(indexlist == "all")==1){
     return(my_list)
   } else {
