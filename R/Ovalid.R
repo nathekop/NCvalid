@@ -16,11 +16,11 @@ Ovalid <- function(x,kmax,kmin=2,method='kmeans',corr='pearson',nstart=100,index
   NCI2 = rep(0,kmax-kmin+1)
   NCI3 = rep(0,kmax-kmin+1)
   if (method == 'hclust_complete') {
-    hh = hclust(dist(x),method = 'complete')
+    hh = hclust(dis,method = 'complete')
   } else if (method == 'hclust_average') {
-    hh = hclust(dist(x),method = 'average')
+    hh = hclust(dis,method = 'average')
   } else if (method == 'hclust_single') {
-    hh = hclust(dist(x),method = 'single')
+    hh = hclust(dis,method = 'single')
   }
   for (k in kmin:kmax){
     if (method == 'kmeans'){
