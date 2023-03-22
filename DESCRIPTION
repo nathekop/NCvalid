@@ -8,7 +8,7 @@ Description: New correlation based cluster validity indices introduced in Wiroon
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-Imports: clusterCrit, cluster, clusterSim, clValid
+Imports: cluster, clusterSim, clValid, fcp
 Authors@R: person("Nathakhun", "Wiroonsri", email = "nathakhun.wir@kmutt.ac.th",
   role = c("aut", "cre"), comment = "https://sites.google.com/view/nwiroonsri/")
 RoxygenNote: 7.1.2
