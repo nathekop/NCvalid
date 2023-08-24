@@ -79,7 +79,7 @@ for (i in 1:6){
 
 ## References
 
-N. Wiroonsri (2021). Clustering performance analysis using new correlation based cluster validity indices, [arXiv:2109.11172](https://arxiv.org/abs/2109.11172).
+Wiroonsri, N.  Clustering performance analysis using a new correlation based cluster validity index, Pattern Recognition, 109910, 2023. https://doi.org/10.1016/j.patcog.2023.109910
 
 ## License
 
