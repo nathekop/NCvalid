@@ -79,7 +79,7 @@ for (i in 1:6){
 
 ## References
 
-Wiroonsri, N.  Clustering performance analysis using a new correlation based cluster validity index, Pattern Recognition, 109910, 2023. https://doi.org/10.1016/j.patcog.2023.109910
+Wiroonsri, N.,  Clustering performance analysis using a new correlation based cluster validity index, Pattern Recognition, 145, 109910, 2024. https://doi.org/10.1016/j.patcog.2023.109910
 
 ## License
 
